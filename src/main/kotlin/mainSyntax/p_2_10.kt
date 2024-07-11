@@ -1,4 +1,6 @@
-package org.example.main_syntax
+@file:Suppress("ktlint:standard:filename")
+
+package mainSyntax
 
 fun main() {
     val numbers = mutableListOf(1, 2, 3, 88, 2, 3, 9, 0, 4, 5)

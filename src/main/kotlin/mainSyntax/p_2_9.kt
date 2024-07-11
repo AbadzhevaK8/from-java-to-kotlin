@@ -1,4 +1,6 @@
-package org.example.main_syntax
+@file:Suppress("ktlint:standard:filename")
+
+package mainSyntax
 
 fun main() {
     val array = arrayOfNulls<Int?>(101)
