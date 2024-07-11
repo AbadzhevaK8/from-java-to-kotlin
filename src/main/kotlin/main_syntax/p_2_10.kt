@@ -6,7 +6,10 @@ fun main() {
     println(sort(numbers))
 }
 
-fun max(a: Int, b: Int) = if (a > b) a else b
+fun max(
+    a: Int,
+    b: Int,
+) = if (a > b) a else b
 
 fun crop(str: String) = str.substring(0, 5.coerceAtMost(str.length))
 
@@ -22,9 +25,10 @@ fun sort(numbers: MutableList<Int>): List<Int> {
     for (i in 1 until numbers.size) {
         for (j in numbers.size - 1 downTo i) {
             if (numbers[j] < numbers[j - 1]) {
-                numbers[j] = numbers[j - 1].also{
-                    numbers[j - 1] = numbers[j]
-                }
+                numbers[j] =
+                    numbers[j - 1].also {
+                        numbers[j - 1] = numbers[j]
+                    }
             }
         }
     }
@@ -32,4 +36,5 @@ fun sort(numbers: MutableList<Int>): List<Int> {
 }
 
 fun sort(numbers: Array<Int>) = sort(numbers.toMutableList())
+
 fun sort(vararg numbers: Int) = sort(numbers.toMutableList())
