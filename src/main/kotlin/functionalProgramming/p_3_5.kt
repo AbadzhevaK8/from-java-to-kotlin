@@ -37,4 +37,8 @@ fun main() {
             .flatMap { it.value }
             .average()
     println(avgFiltered)
+
+    val message = "лия Лия Привет"
+    var result = message.split(" ").map { it == it }
+    println(result)
 }
